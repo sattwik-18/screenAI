@@ -1,0 +1,42 @@
+models:
+  detector:
+    name: "SCRFD-500M"
+    path: "C:/Users/SATTWIK/.insightface/models/buffalo_s/det_500m.onnx"
+    format: "ONNX"
+    input_shape: [1, 3, "H", "W"]
+    license: "DeepInsight Non-Commercial Research"
+    description: "Sample and Computation Redistribution for Efficient Face Detection"
+  landmarks_2d:
+    name: "2D-106Det"
+    path: "C:/Users/SATTWIK/.insightface/models/buffalo_s/2d106det.onnx"
+    format: "ONNX"
+    input_shape: [1, 3, 192, 192]
+    output_shape: [1, 212]
+    license: "DeepInsight Non-Commercial Research"
+    description: "Dense 106-point 2D facial landmark and contour detector"
+  landmarks_3d_pose:
+    name: "1K-3D-68"
+    path: "C:/Users/SATTWIK/.insightface/models/buffalo_s/1k3d68.onnx"
+    format: "ONNX"
+    input_shape: [1, 3, 192, 192]
+    output_shape: [1, 204]
+    license: "DeepInsight Non-Commercial Research"
+    description: "68-point 3D landmark and head pose regression model"
+  liveness_pad:
+    name: "MiniFASNetV2"
+    path: "models/liveness/minifasnet_v2.onnx"
+    format: "ONNX"
+    input_shape: [1, 3, 80, 80]
+    output_shape: [1, 3]
+    license: "Minivision Apache 2.0 / CC-BY-NC weights"
+    description: "Silent Face Anti-Spoofing deep texture and presentation attack classifier"
+  recognition:
+    name: "ArcFace-MobileFaceNet"
+    path: "C:/Users/SATTWIK/.insightface/models/buffalo_s/w600k_mbf.onnx"
+    format: "ONNX"
+    input_shape: [1, 3, 112, 112]
+    output_shape: [1, 512]
+    license: "DeepInsight Non-Commercial Research"
+    description: "512-dimensional L2-normalized deep metric face embedding model"
+version: "1.0.0"
+decision_policy_version: "v1.0-dev-calibrated"
